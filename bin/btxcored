@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+'use strict';
+
+if (parseInt(process.version.split('.')[0].slice(1)) < 8) {
+  throw new Error('BTXCore requires Node version 8 or higher.');
+}
+
+var path = require('path');
+var btxcored = require('btxcore-node/lib/cli/btxcored');
+var servicesPath = path.resolve(__dirname, '../');
+var additionalServices = ['insight-btx-api', 'insight-btx-ui'];
+btxcored(servicesPath, additionalServices);

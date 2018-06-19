@@ -1,0 +1,20 @@
+[Unit]
+Description={{ deb_package_description }}
+Requires=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/opt/btxcore
+ExecStart=/usr/opt/btxcore/bin/btxcored
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=15
+User=btxcore
+ExecStartPre=/bin/mkdir -p /run/btxcore
+ExecStartPre=/bin/chown btxcore:btxcore /run/btxcore
+ExecStartPre=/bin/chmod 755 /run/btxcore
+PermissionsStartOnly=true
+TimeoutStopSec=300
+
+[Install]
+WantedBy=multi-user.target
