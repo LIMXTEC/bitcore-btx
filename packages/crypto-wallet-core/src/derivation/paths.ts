@@ -5,6 +5,9 @@ export const Paths = {
   BCH: {
     mainnet: `m/44'/145'/0'`
   },
+  BTX: {
+    mainnet: `m/44'/160'/0'`
+  },
   ETH: {
     mainnet: `m/44'/60'/0'`
   },
