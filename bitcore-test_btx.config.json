@@ -1,0 +1,30 @@
+{
+  "bitcoreNode": {
+    "services": {
+      "api": {
+        "wallets": {
+          "allowCreationBeforeCompleteSync": true
+        }
+      }
+    },
+    "chains": {
+      "BTX": {
+        "regtest": {
+          "chainSource": "p2p",
+          "trustedPeers": [
+            {
+              "host": "bitcore",
+              "port": 8556
+            }
+          ],
+          "rpc": {
+            "host": "bitcore",
+            "port": 8555,
+            "username": "bitcorenodetest",
+            "password": "local321"
+          }
+        }
+      }
+    }
+  }
+}

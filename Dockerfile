@@ -11,6 +11,7 @@ COPY ./packages/bitcore-lib-cash/package.json ./packages/bitcore-lib-cash/packag
 COPY ./packages/bitcore-lib-btx/package.json ./packages/bitcore-lib-btx/package.json
 COPY ./packages/bitcore-p2p/package.json ./packages/bitcore-p2p/package.json
 COPY ./packages/bitcore-p2p-cash/package.json ./packages/bitcore-p2p-cash/package.json
+COPY ./packages/bitcore-p2p-btx/package.json ./packages/bitcore-p2p-btx/package.json
 COPY ./packages/bitcore-wallet-client/package.json ./packages/bitcore-wallet-client/package.json
 COPY ./packages/bitcore-client/package.json ./packages/bitcore-client/package.json
 COPY ./packages/bitcore-wallet/package.json ./packages/bitcore-wallet/package.json
