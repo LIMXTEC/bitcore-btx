@@ -1,5 +1,5 @@
 import { LoggerConfig, NgxLoggerLevel } from 'ngx-logger';
-import { BCH, BTC, Chain, tBCH, tBTC } from '../app/types/chains';
+import { BCH, BTC, Chain, tBCH, tBTC, tBCX, tBTX } from '../app/types/chains';
 
 const loggingSettings: LoggerConfig = {
   serverLoggingUrl: '/api/logs/insight',
@@ -9,7 +9,7 @@ const loggingSettings: LoggerConfig = {
 
 const initialChain: Chain = BCH;
 
-const expectedChains: Chain[] = [BCH, tBCH, BTC, tBTC];
+const expectedChains: Chain[] = [BCH, tBCH, BTC, tBTC, BTX, tBTX];
 
 export const environment = {
   apiPrefix: 'https://api.bitcore.io/api',

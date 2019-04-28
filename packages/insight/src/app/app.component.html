@@ -61,6 +61,20 @@
             </ion-item>
             <ion-item
               [routerDirection]="'root'"
+              [routerLink]="['/BTX']"
+              routerLinkActive="active"
+            >
+              <ion-label>BTX</ion-label>
+            </ion-item>
+            <ion-item
+              [routerDirection]="'root'"
+              [routerLink]="['/tBTX']"
+              routerLinkActive="active"
+            >
+              <ion-label>tBTX</ion-label>
+            </ion-item>
+            <ion-item
+              [routerDirection]="'root'"
               [routerLink]="['/BTC']"
               routerLinkActive="active"
             >
@@ -92,6 +106,22 @@
               }"
             >
               <ion-label>Bits (BCH)</ion-label>
+            </ion-item>
+            <ion-item
+              (click)="config.displayValueCode$.next('BTX')"
+              [ngClass]="{
+                active: (config.displayValueCode$ | async) === 'BTX'
+              }"
+            >
+              <ion-label>BTX</ion-label>
+            </ion-item>
+            <ion-item
+              (click)="config.displayValueCode$.next('BTX_bits')"
+              [ngClass]="{
+                active: (config.displayValueCode$ | async) === 'BTX_bits'
+              }"
+            >
+              <ion-label>Bits (BTX)</ion-label>
             </ion-item>
             <ion-item
               (click)="config.displayValueCode$.next('BTC')"

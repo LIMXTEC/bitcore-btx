@@ -43,7 +43,11 @@ const consolidatedChainBase = (chain: Chain) =>
         ? 'BTC/mainnet'
         : chain.code === 'tBTC'
           ? 'BTC/testnet'
-          : 'unknownTemporaryChainBase';
+          : chain.code === 'BTX'
+            ? 'BTX/mainnet'
+            : chain.code === 'tBTX'
+              ? 'BTX/testnet'
+              : 'unknownTemporaryChainBase';
 
 const chainNetworkToCode = (chainNetwork: { chain: string; network: string }) =>
   Chains[

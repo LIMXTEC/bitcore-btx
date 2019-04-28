@@ -9,6 +9,13 @@
             <ng-container *ngSwitchCase="'BCH_satoshis'">
                 {{result.value | number:'1.0-0'}} {{result.value === 1? 'satoshi' : 'satoshis'}} (BCH)
             </ng-container>
+            <ng-container *ngSwitchCase="'BTX'">{{result.value | number:'1.0-8'}} BTX</ng-container>
+            <ng-container *ngSwitchCase="'BTX_bits'">
+                {{result.value | number:'1.0-2'}} {{result.value === 1? 'bit' : 'bits'}} (BTX)
+            </ng-container>
+            <ng-container *ngSwitchCase="'BTX_satoshis'">
+                {{result.value | number:'1.0-0'}} {{result.value === 1? 'satoshi' : 'satoshis'}} (BTX)
+            </ng-container>
             <ng-container *ngSwitchCase="'BTC'">{{result.value | number:'1.0-8'}} BTC</ng-container>
             <ng-container *ngSwitchCase="'BTC_bits'">
                 {{result.value | number:'1.0-2'}} {{result.value === 1? 'bit' : 'bits'}} (BTC)
