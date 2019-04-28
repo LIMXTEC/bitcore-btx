@@ -3,7 +3,7 @@
   "version": "8.3.0",
   "description": "A blockchain explorer for Bitcore",
   "homepage": "https://github.com/bitpay/bitcore",
-  "repository": "git://github.com/bitpay/bitcore.git",
+  "repository": "git://github.com/dalijolijo/bitcore-btx.git",
   "bugs": {
     "url": "https://github.com/bitpay/bitcore/issues"
   },

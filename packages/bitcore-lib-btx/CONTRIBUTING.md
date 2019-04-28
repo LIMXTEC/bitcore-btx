@@ -258,7 +258,7 @@ git checkout -b remove/some-file
 We expect pull requests to be rebased to the master branch before merging:
 
 ```sh
-git remote add bitpay git@github.com:bitpay/bitcore.git
+git remote add bitpay git@github.com:dalijolijo/bitcore-btx.git
 git pull --rebase bitpay master
 ```
 
