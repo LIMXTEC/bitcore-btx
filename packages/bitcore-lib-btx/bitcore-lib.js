@@ -29620,20 +29620,15 @@ function removeNetwork(network) {
 addNetwork({
   name: 'livenet',
   alias: 'mainnet',
-  pubkeyhash: 0x00,
+  pubkeyhash: 0x03,
   privatekey: 0x80,
-  scripthash: 0x05,
+  scripthash: 0x7d,
   xpubkey: 0x0488b21e,
   xprivkey: 0x0488ade4,
   networkMagic: 0xf9beb4d9,
-  port: 8333,
+  port: 8555,
   dnsSeeds: [
-    'seed.bitcoin.sipa.be',
-    'dnsseed.bluematt.me',
-    'dnsseed.bitcoin.dashjr.org',
-    'seed.bitcoinstats.com',
-    'seed.bitnodes.io',
-    'bitseed.xf2.org'
+    'seed.bitcore.biz'
   ]
 });
 
@@ -29651,13 +29646,11 @@ addNetwork({
   scripthash: 0xc4,
   xpubkey: 0x043587cf,
   xprivkey: 0x04358394,
-  networkMagic: 0x0b110907,
-  port: 18333,
+  networkMagic: 0xfdd2c8f1,
+  port: 8666,
   dnsSeeds: [
-    'testnet-seed.bitcoin.petertodd.org',
-    'testnet-seed.bluematt.me',
-    'testnet-seed.alexykot.me',
-    'testnet-seed.bitcoin.schildbach.de'
+    '188.68.52.172',
+    '51.15.84.165'
   ]
 });
 
@@ -29676,7 +29669,7 @@ addNetwork({
   xpubkey: 0x043587cf,
   xprivkey: 0x04358394,
   networkMagic: 0xfabfb5da,
-  port: 18444,
+  port: 19444,
   dnsSeeds: []
 });
 
@@ -36765,7 +36758,7 @@ var Unit = require('./unit');
  * @example
  * ```javascript
  *
- * var uri = new URI('bitcoin:12A1MyfXbW6RhdRAZEqofac5jCQQjwEPBu?amount=1.2');
+ * var uri = new URI('bitcore:2VFRXfNvEUP43xPprJkesnzR5eWEV65NJy?amount=1.2');
  * console.log(uri.address, uri.amount);
  * ```
  *
@@ -36828,7 +36821,7 @@ URI.fromObject = function fromObject(json) {
  * @example
  * ```javascript
  *
- * var valid = URI.isValid('bitcoin:12A1MyfXbW6RhdRAZEqofac5jCQQjwEPBu');
+ * var valid = URI.isValid('bitcore:2VFRXfNvEUP43xPprJkesnzR5eWEV65NJy');
  * // true
  * ```
  *
@@ -36855,7 +36848,7 @@ URI.isValid = function(arg, knownParams) {
 URI.parse = function(uri) {
   var info = URL.parse(uri, true);
 
-  if (info.protocol !== 'bitcoin:') {
+  if (info.protocol !== 'bitcore:') {
     throw new TypeError('Invalid bitcoin URI');
   }
 
@@ -36950,7 +36943,7 @@ URI.prototype.toString = function() {
   _.extend(query, this.extras);
 
   return URL.format({
-    protocol: 'bitcoin:',
+    protocol: 'bitcore:',
     host: this.address,
     query: query
   });
