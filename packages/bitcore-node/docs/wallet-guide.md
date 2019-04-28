@@ -31,6 +31,10 @@ alias bitcoinregtest='/Applications/Bitcoin-Qt.app/Contents/MacOS/Bitcoin-Qt -da
 alias bitcoincashmainnet='/Applications/BitcoinABC-Qt.app/Contents/MacOS/BitcoinABC-Qt -datadir=/Users/username/blockchains/bitcoincash/networks/mainnet/ -flexiblehandshake -initiatecashconnections'
 
 alias bitcoincashregtest='/Applications/BitcoinABC-Qt.app/Contents/MacOS/BitcoinABC-Qt -datadir=/Users/username/blockchains/bitcoincash/networks/regtest/ -flexiblehandshake -initiatecashconnections'
+
+alias bitcoremainnet='/Applications/Bitcore-Qt.app/Contents/MacOS/Bitcore-Qt -datadir=/Users/username/blockchains/bitcore/networks/mainnet/'
+
+alias bitcoreregtest='/Applications/Bitcore-Qt.app/Contents/MacOS/Bitcore-Qt -datadir=/Users/username/blockchains/bitcore/networks/regtest/'
 ```
 
 Ensure Mongod is running
@@ -45,11 +49,13 @@ Start the Bitcore node in the /bitcore/ project root directory
 npm run node
 ```
 
-To run RegTest Bitcoin Core RegTest Client
+To run RegTest Bitcoin/Bitcore Core RegTest Client
 
 ```sh
 . ~/.profile
 bitcoinregtest
+OR
+bitcoreregtest
 ```
 
 > If successful Bitcore logo should be blue and syncing blocks on mongod in the background

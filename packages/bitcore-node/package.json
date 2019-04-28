@@ -44,6 +44,7 @@
     "typescript",
     "bitcoin",
     "bitcoin-cash",
+    "bitcoin-btx",
     "ethereum",
     "node"
   ],
@@ -79,8 +80,10 @@
     "bitcore-client": "^8.3.0",
     "bitcore-lib": "^8.3.0",
     "bitcore-lib-cash": "^8.3.0",
+    "bitcore-lib-btx": "^8.3.0",
     "bitcore-p2p": "^8.3.0",
     "bitcore-p2p-cash": "^8.3.0",
+    "bitcore-p2p-btx": "^8.3.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",

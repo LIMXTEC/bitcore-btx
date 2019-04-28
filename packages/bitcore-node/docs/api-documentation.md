@@ -781,6 +781,14 @@ curl -v localhost:3000/api/status/enabled-chains
     {
         "chain": "BCH",
         "network": "testnet"
+    },
+    {
+        "chain": "BTX",
+        "network": "mainnet"
+    },
+    {
+        "chain": "BTX",
+        "network": "testnet"
     }
 ]
 ```
