@@ -14,6 +14,7 @@ import { PriceProvider } from '../../providers/price/price';
 
 import * as bitcoreLib from 'bitcore-lib';
 import * as bitcoreLibCash from 'bitcore-lib-cash';
+import * as bitcoreLibBTX from 'bitcore-lib-btx';
 
 @Injectable()
 @IonicPage({

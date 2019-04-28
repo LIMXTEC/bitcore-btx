@@ -93,6 +93,39 @@ npm install
             "password": "password"
           }
         }
+      },
+      "BTX": {
+        "mainnet": {
+          "parentChain": "BTC",
+          "forkHeight": 492820,
+          "trustedPeers": [
+            {
+              "host": "127.0.0.1",
+              "port": 40008
+            }
+          ],
+          "rpc": {
+            "host": "127.0.0.1",
+            "port": 40009,
+            "username": "username",
+            "password": "password"
+          }
+        },
+        "regtest": {
+          "chainSource": "p2p",
+          "trustedPeers": [
+            {
+              "host": "127.0.0.1",
+              "port": 40020
+            }
+          ],
+          "rpc": {
+            "host": "127.0.0.1",
+            "port": 40021,
+            "username": "username",
+            "password": "password"
+          }
+        }
       }
     }
   }
@@ -163,10 +196,12 @@ npm run node
 - [Bitcore ECIES](https://github.com/bitpay/bitcore-ecies) - Uses ECIES symmetric key negotiation from public keys to encrypt arbitrarily long data streams
 - [Bitcore Lib](packages/bitcore-lib) - A pure and powerful JavaScript Bitcoin library
 - [Bitcore Lib Cash](packages/bitcore-lib-cash) - A pure and powerful JavaScript Bitcoin Cash library
+- [Bitcore Lib BTX](packages/bitcore-lib-btx) - A pure and powerful JavaScript Bitcore BTX library
 - [Bitcore Message](https://github.com/bitpay/bitcore-message) - Bitcoin message verification and signing
 - [Bitcore Mnemonic](packages/bitcore-mnemonic) - Implements mnemonic code for generating deterministic keys
 - [Bitcore P2P](packages/bitcore-p2p) - The peer-to-peer networking protocol for BTC
 - [Bitcore P2P Cash](packages/bitcore-p2p-cash) - The peer-to-peer networking protocol for BCH
+- [Bitcore P2P BTX](packages/bitcore-p2p-btx) - The peer-to-peer networking protocol for BTX
 - [Crypto Wallet Core](packages/crypto-wallet-core) - A coin-agnostic wallet library for creating transactions, signing, and address derivation
 
 ## Extras

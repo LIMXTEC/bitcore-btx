@@ -95,6 +95,18 @@ const Config = function (): ConfigType {
             password: 'bitcoin'
           }
         }
+      },
+      BTX: {
+        mainnet: {
+          chainSource: 'p2p',
+          trustedPeers: [{ host: '127.0.0.1', port: 8555 }],
+          rpc: {
+            host: '127.0.0.1',
+            port: 8556,
+            username: 'btx',
+            password: 'btx'
+          }
+        }
       }
     });
   }

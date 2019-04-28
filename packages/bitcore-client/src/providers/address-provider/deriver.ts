@@ -1,6 +1,7 @@
 import { Wallet } from '../../wallet';
 import { BtcDeriver } from './btc';
 import { BchDeriver } from './bch';
+import { BtxDeriver } from './btx';
 import { EthDeriver } from './eth';
 
 export interface IDeriver {
@@ -22,6 +23,7 @@ export interface IDeriver {
 const derivers: { [chain: string]: IDeriver } = {
   BTC: new BtcDeriver(),
   BCH: new BchDeriver(),
+  BTX: new BtxDeriver(),
   ETH: new EthDeriver()
 };
 
@@ -31,6 +33,9 @@ const paths = {
   },
   BCH: {
     mainnet: `m/44'/145'/0'`
+  },
+  BTX: {
+    mainnet: `m/44'/160'/0'`
   },
   ETH: {
     mainnet: `m/44'/60'/0'`
