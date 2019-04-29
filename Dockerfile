@@ -23,9 +23,15 @@ COPY ./packages/crypto-wallet-core/package.json ./packages/crypto-wallet-core/pa
 
 RUN ./node_modules/.bin/lerna bootstrap
 
+#https://github.com/bitpay/bitcore/issues/2119
+RUN ./node_modules/.bin/lerna run --scope=bitcore-client compile
+
 COPY . .
 EXPOSE 3000
 EXPOSE 8100
 #CMD ["./node_modules/.bin/lerna", "run", "start"]
-CMD ["npm", "--prefix=./packages/bitcore-node", "start"]
+#CMD ["npm", "--prefix=./packages/bitcore-node", "start"]
 #CMD ["npm", "--prefix=./packages/insight", "start"]
+
+#https://github.com/bitpay/bitcore/issues/2119
+CMD ["./node_modules/.bin/lerna", "run", "--scope=bitcore-node", "start", "--stream"]
