@@ -78,7 +78,9 @@ export class MessagesPage {
     }
 
     const bitcore =
-      this.chainNetwork.chain === 'BTC' ? bitcoreLib : bitcoreLibCash;
+      this.chainNetwork.chain === 'BTC'
+        ? bitcoreLib : this.chainNetwork.chain === 'BTX' 
+          ? bitcoreLibBtx : bitcoreLibCash;
     const message = new bitcore.Message(values.message);
 
     try {
@@ -95,7 +97,9 @@ export class MessagesPage {
 
   private isAddressValid(addr): boolean {
     const bitcore =
-      this.chainNetwork.chain === 'BTC' ? bitcoreLib : bitcoreLibCash;
+      this.chainNetwork.chain === 'BTC' 
+        ? bitcoreLib : this.chainNetwork.chain === 'BTX'
+          ? bitcoreLibBtx : bitcoreLibCash;
     return !!bitcore.Address.isValid(addr, this.chainNetwork.network)
       ? true
       : false;

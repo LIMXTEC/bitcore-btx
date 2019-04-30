@@ -18,3 +18,7 @@ To use a specific network / chain set the `NETWORK` and `CHAIN` environment vari
 ```sh
 NETWORK=testnet CHAIN=BCH npm start
 ```
+OR
+```sh
+NETWORK=mainnet CHAIN=BTX npm start
+```
