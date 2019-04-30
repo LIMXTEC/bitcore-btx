@@ -13,6 +13,7 @@
 
 ```sh
 git clone https://github.com/dalijolijo/bitcore-btx.git
+cd bitcore-btx
 git checkout master
 npm install
 ```
