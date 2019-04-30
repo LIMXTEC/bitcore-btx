@@ -154,8 +154,8 @@ upnp=1
 # if using Bitcoin Core v0.17+ prefix
 # [main]
 
-port=20008
-rpcport=20009
+port=40008
+rpcport=40009
 rpcallowip=127.0.0.1
 
 rpcuser=username
